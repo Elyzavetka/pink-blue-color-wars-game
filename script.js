@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const cells = Array.from(document.getElementsByClassName('cell'));
   const result = document.getElementById('result');
   const newGameButton = document.getElementById('newGameButton');
-  const gameInfo = document.getElementById('gameInfo');
 
   const player1 = 'blue';
   const player2 = 'pink';
@@ -37,6 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (checkWinCondition(lineIndex, colIndex)) {
         result.textContent = `Player ${currentPlayer} wins!`;
+        if (currentPlayer === player1) {
+          result.style.color = '#4e97d6'; // Dark blue
+        } else if (currentPlayer === player2) {
+          result.style.color = '#e796ad'; // Dark pink
+        }
         gameEnded = true;
       } else {
         currentPlayer = currentPlayer === player1 ? player2 : player1;
@@ -44,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (checkTie() && !gameEnded) {
         result.textContent = "It's a tie!";
+        result.style.color = '#333333'; // Medium gray
         gameEnded = true;
       }
     }
@@ -129,14 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
     currentPlayer = player1;
     gameEnded = false;
     result.textContent = '';
+    result.style.color = '#333333'; // Medium gray
     cells.forEach((cell) => {
       cell.className = 'cell';
     });
   }
-
-  gameInfo.innerHTML = `
-    <p>Players take turns putting their marks in empty squares.</p>
-    <p>The first player to get 4 of her marks in a row (up, down, across, or diagonally) is the winner.</p>
-    <p>When all 16 squares are full, the game is over. If no player has 4 marks in a row, the game ends in a tie.</p>
-  `;
 });
