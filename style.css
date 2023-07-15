@@ -91,3 +91,81 @@ body {
 .new-game-button:hover {
   background-color: #1565c0; 
 }
+/* Add your existing CSS styles here */
+
+/* Add responsive styles here */
+
+/* Adjust heading size for smaller screens */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+
+/* Adjust container alignment for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+
+/* Adjust game info width for smaller screens */
+@media (max-width: 768px) {
+  .game-info {
+    width: 90%;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+/* Adjust board size for smaller screens */
+@media (max-width: 768px) {
+  .board {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+/* Adjust cell size for smaller screens */
+@media (max-width: 480px) {
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+  }
+}
+
+/* Adjust result margin for smaller screens */
+@media (max-width: 768px) {
+  .result {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Adjust new game button position for smaller screens */
+@media (max-width: 768px) {
+  .new-game-button {
+    position: absolute;
+    top: unset;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Adjust new game button position for medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .new-game-button {
+    position: absolute;
+    top: unset;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
