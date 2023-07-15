@@ -75,33 +75,33 @@ body {
 }
 
 .new-game-button {
-  position: absolute;
-  top: 450px;
-  left: 400px;
   display: block;
+  margin: auto;
   background-color: #559f5e;
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out; 
+  transition: background-color 0.3s ease-in-out;
 }
+
+
+
 
 .new-game-button:hover {
   background-color: #1565c0; 
 }
-/* Add your existing CSS styles here */
 
-/* Add responsive styles here */
 
 /* Adjust heading size for smaller screens */
 @media (max-width: 768px) {
   .heading {
     font-size: 36px;
-    margin: 20px 0;
+    margin: 10px 0;
   }
 }
+
 
 /* Adjust container alignment for smaller screens */
 @media (max-width: 768px) {
@@ -124,9 +124,9 @@ body {
 /* Adjust board size for smaller screens */
 @media (max-width: 768px) {
   .board {
-    width: 90%;
+    width: 70%;
     height: auto;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 
@@ -135,7 +135,7 @@ body {
   .cell {
     width: 60px;
     height: 60px;
-    font-size: 14px;
+    
   }
 }
 
@@ -153,17 +153,6 @@ body {
     position: absolute;
     top: unset;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-/* Adjust new game button position for medium screens */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .new-game-button {
-    position: absolute;
-    top: unset;
-    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
   }
