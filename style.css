@@ -62,8 +62,9 @@ body {
 .result {
   font-size: 24px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: 300px;
+  margin-bottom: 20px;
 }
 
 .result.blue {
